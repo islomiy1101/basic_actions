@@ -1,0 +1,28 @@
+#parttitle{background-color: lightsteelblue; border-radius: 15px;
+                text-align: center;font: bold 18px Arial, Helvetica, sans-serif;padding: 10px 0 7px 5px;}
+#partdesc{background-color:#BCE3C0; padding: 10px 0 7px 15px;text-align: justify;}                
+#qname{background-color:#E3C8CC;border-radius: 5px; font: bold 17px Arial, Helvetica, sans-serif;padding: 20px 0 1px 5px;}  
+#items_question{background-color:#B7E8E5;border-radius: 5px;padding-top: 8px;}
+@media only screen and (max-width: 1000px) {
+    img {text-align: left;max-height: 200px;max-width: 300px;}
+}
+@media only screen and (max-width: 850px) {
+    img {text-align: left;max-height: 180px;max-width: 640px;}#partdesc{font-size: 11px;}
+    #items_question{font-size:12px;}#qname{font-size: 14px;}#parttitle{font-size: 16px;}
+    #qname,img{max-width:368px;max-height:150px; padding: 0;}
+}
+@media only screen and (max-width: 600px) {
+    img{text-align: left;max-width: 300px;}.imgs{margin-left:140px;max-height:200px;}.logobase{margin-left:140px;}#parttitle{font-size: 14px;}#qname{font-size: 14px;}#items_question{font-size: 13px;}
+}
+@media only screen and (max-width: 500px) {img {text-align: left;max-width: 200px;}.imgs{margin-left:140px;}.add_edu{font-size:10px;}.logobase{margin-left:140px;}#parttitle{font-size: 11px;}#qname{font-size: 10px;}#items_question{font-size: 10px;}
+}
+    @media only screen and (max-width: 400px) {
+        img {
+            text-align: left;
+            /* width: 100%;  */
+         
+        }
+    }
+img{
+    /* width: 100%; */
+}

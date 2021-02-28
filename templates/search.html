@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Izlash sahifasi</title>
+<style>
+    #header {
+        background-color: #36A5C3;
+    }
+
+</style>
+{% endblock %}
+{% block content %}
+<br>
+<div class="container">
+    <div class="col-md-13 mx-auto" style="padding-top: 100px;">
+        <h2 style="text-align: center;">Izlash Natijasi: <span style="color:red"> {{query}} </span>so'rovi bo'yicha ma'lumot</h2>
+        <hr>
+        {% if data %}
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th>Ishtirokchilar</th>
+                <th>Viloyat</th>
+                <th>O`quv Markazi</th>
+                <th>Til</th>
+                <th>Ball</th>
+                <th>Natija Vil</th>
+                <th>Natija Res</th>
+                <th>Imtixon Sanasi</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in data %}
+            <tr>
+                <td><span style="font-weight: 700;">{{i.user_id.first_name}} {{i.user_id.last_name}}</span> <br>
+                    <span>{{i.register_id.contact_number2}}</span>
+                </td>
+                <td>{{i.register_id.provin}}</td>
+                <td>{{i.register_id.training_center}}</td>
+                <td>{{i.question_langid}}</td>
+                <td><span style="font-weight: bold;">{{i.result}}</span> <br>
+                    {{i.correct_answers}}/{{i.total_questions}}
+                </td>
+                <td>{{i.place_number}}</td>
+                <td>{{i.place_number_country}}</td>
+                <td>{{i.question_langid.start_time|safe }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% elif edu %}
+        <div class="row">
+            {% for i in edu %}
+            <div class="col-md-5 mt-5 mb-5">
+                <p><img src="/media/{{i.school_logo|safe}}" alt="" width="300" height="300"></p>
+            </div>
+            <div class="col-md-6 mt-5 mb-5" style="text-align:justify; line-height:20px;">
+                <h2 class="text-center">{{i.school_name}}</h2>
+                <p><span><img src="{% static 'images/kitob.png'%}" width='35' height='35'/>&nbsp;&nbsp;{{i.science|safe}}</span>
+                </p>
+                <p><span><img src="{% static 'images/lang.png'%}" width='35'
+                              height='40'/>&nbsp;&nbsp;{{i.lang|safe}}</span></p>
+                <p><span><img src="{% static 'images/call.png'%}" width='30' height='30'/></span>&nbsp;&nbsp;&nbsp;+{{i.contact_number}}
+                </p>
+                <p><span><img src="{% static 'images/web.png'%}" width='30' height='35'/></span>&nbsp;&nbsp;&nbsp;{{i.website}}&nbsp;&nbsp;&nbsp;
+                    <a href="{{i.facebook}}"><img src="{% static 'images/face.png' %}" alt="" width="40"
+                                                  height="38"></a>&nbsp;&nbsp;
+                    <a href="{{i.telegram}}"><img src="{% static 'images/telegram.png' %}" alt="" width="35"
+                                                  height="32"></a>&nbsp;&nbsp;
+                    <a href="{{i.instagram}}"><img src="{% static 'images/inst.png' %}" alt="" width="35"
+                                                   height="35"></a>&nbsp;&nbsp;
+                    <a href="{{i.youtube}}"><img src="{% static 'images/you.png' %}" alt="" width="50" height="50"></a>
+                <p><span><img src="{% static 'images/geod.png'%}" width='30' height='35'/></span>&nbsp;&nbsp;&nbsp;{{i.provin}}
+                    viloyati ,{{i.address}}</p>
+            </div>
+            {% endfor%}
+        </div>
+        {% else %}
+        <br><br>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+            {{message|safe}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endif %}
+    </div>
+</div>
+<br><br><br>
+{% endblock%}

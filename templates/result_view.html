@@ -1,0 +1,61 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Viloyat bo`yicha Natijalar</title>
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Natijalar</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="col-md-13 mx-auto" style="padding-top: 100px;">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Ishtirokchilar</th>
+                    <th>Viloyat</th>
+                    <th>O`quv Markazi</th>
+                    <th>Til</th>
+                    <th>Ball</th>
+                    <th>Natija Vil</th>
+                    <th>Natija Res</th>
+                    <th>Imtixon Sanasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td><span style="font-weight: 700;">{{i.user_id.first_name}} {{i.user_id.last_name}}</span> <br>
+                        <span>{{i.register_id.contact_number2}}</span>
+                    </td>
+                    <td>{{i.register_id.provin}}</td>
+                    <td>{{i.register_id.training_center}}</td>
+                    <td>{{i.question_langid}}</td>
+                    <td><span style="font-weight: bold;">{{i.result}}</span> <br>
+                        {{i.correct_answers}}/{{i.total_questions}}
+                    </td>
+                    <td>{{i.place_number}}</td>
+                    <td>{{i.place_number_country}}</td>
+                    <td>{{i.question_langid.start_time|safe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br><br>
+{% endblock%}

@@ -1,0 +1,65 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/duolingo1.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                Duolingo -  amerikalik til-o'rganish sayti va mobil ilovasi bo'lib, 
+                shuningdek, raqamli tilni bilish darajasini baholash imtihoni. Kompaniya 
+                freemium modelidan foydalanadi; ilova va veb-saytga bepul kirish mumkin, 
+                garchi Duolingo shuningdek premium xizmatni haq evaziga taqdim etadi.
+
+                2020 yil 13 oktyabr holatiga ko'ra, til o'rganadigan veb-sayt va dastur 
+                38 ta tilda 98 ta turli xil til kurslarini taklif qildi.  Ilovada dunyo 
+                bo'ylab 300 milliondan ortiq foydalanuvchi ro'yxatdan o'tgan.
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

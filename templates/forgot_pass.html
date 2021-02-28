@@ -1,0 +1,105 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Parolingizni unutdingizmi ?</title>
+<style>
+    #header {
+        background-color: #36A5C3;
+    }
+    .spinner{
+        height:100px;width:100px;border: 10px solid gray;border-bottom:10px solid  blue;
+        animation:ani 1s linear infinite;border-radius: 50%;margin:auto
+    }
+    @keyframes ani{
+        from{transform:rotate(0deg)}
+        to{transform:rotate(360deg)}
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto" style="padding-top: 90px;">
+            <div class="my-5 p-5" style="box-shadow:0px 0px 10px black;">
+                <h2>Parolni Qayta O'rnatish</h2> <hr>
+                <div id="result"></div>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Foydalanuvchi nomini kiriting</label>
+                            <input type="text" class="form-control" id="un" name="username" placeholder="Foydalanuvchi nomingizni kiriting...">
+                        </div>
+                        <button type="button" class="btn btn-warning" onclick="getpass()" id="continue">Davom etish</button>
+                        <div class="mt-2" style="display:none" id="spin">
+                            <div class="spinner"></div>
+                        </div>
+                    
+                        <div class="form-group" style="display:none" id="afterotp">
+                            <label>Bir Martalik Kod</label>
+                            <input type="number" class="form-control" id="uotp" placeholder="Kodni kiriting...">
+                            
+                            <button onclick="matchotp()" type="button" class="btn btn-info mt-3">Kodni Tasdiqlash</button>
+                        </div>
+
+                        <div style="display:none" id="changepass">
+                            <div class="form-group">
+                                <label>Yangi Parol Kiriting</label>
+                                <input type="password" name="npass" class="form-control" placeholder="Yangi Parol Kiriting...">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Parolni Yangilash" class="btn btn-success">
+                            </div>
+                        </div>
+                    <input type="hidden"  id="realotp">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getpass(){
+            $("#spin").show();
+            let username=$("#un").val();
+            $.ajax({
+                url:"{% url 'reset_password' %}",
+                type:"get",
+                data:{username:username},
+                success:function(data){
+                    $("#spin").hide();
+                    if(data.status=="failed"){
+                        $("#result").html("<p class='alert alert-danger'>Bu foydalanuvchi nomi bilan hech kim ro`yxatdan o`tmagan</p>");
+                    }
+                    else if(data.status=="error"){
+                        $("#result").html("<p class='alert alert-danger'>Elektron pochta xabarini yuborib bo'lmadi "+data.email+" Nimadir noto'g'ri bajarildi!!!</p>");
+                    }
+                    else if(data.status=="sent"){
+                        $("#result").html("<p class='alert alert-success'>Ro'yxatdan o'tgan elektron pochta identifikatoringizga yuborilgan Bir Martalik Kod: "+data.email+"</p>");
+                        $("#continue").hide();
+                        $("#afterotp").slideDown(1000);
+                        $("#realotp").val(data.rotp)
+                    }
+                }
+            })
+        }
+
+        function matchotp(){
+            uotp = $("#uotp").val();
+            rotp = $("#realotp").val();
+
+            if(uotp==rotp){
+                $("#afterotp").hide()
+                $("#changepass").fadeIn(1000);
+                $("#result").html("<p class='alert alert-success'>Muvaffaqiyatni tasdiqlash!!!</p>");
+            }else{
+                $("#result").html("<p class='alert alert-danger'>Bir Martalik Kod noto`g`ri</p>");
+            }
+        }
+    </script>
+
+    {% if status %}
+    <script>
+        alert("{{status}}");
+        window.location="/"
+    </script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,70 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Biz bilan Aloqa</title>
+
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Tilni tanlang</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'languages'%}">Tillar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <br>
+            <h3 class="text-center" style="font-size:30px;font-weight:bold; padding-bottom:15px;">Samarali imtihon turlari</h3>
+             {% if messages%}
+            {% for message in messages %}
+            <div class="alert alert-danger text-center" role="alert">
+                {{message|safe}}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="message" style="display: none;">Avval ruyxatdan oting</div>
+            <div class="courses pt-20">
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {%for langs in data %}
+                    {% if user.is_authenticated %}
+                    <input type="submit" class="primary-btn transparent mr-10 mb-15 wow fadeInDown"
+                           data-wow-duration="1s"
+                           data-wow-delay=".3s" name="langs" id="submitbtn" value="{{langs.name_lang}}" style="border:none">
+                    {%else%}
+                    <input type="submit" class="primary-btn transparent mr-10 mb-10 wow fadeInDown"
+                           data-wow-duration="1s"
+                           data-wow-delay=".3s" data-html="true" data-toggle="tooltip" data-placement="center"
+                           title="Iltimos! Avval ro`yxatdan o`ting" name="langs" id="submitbtn"
+                           value="{{langs.name_lang}}"
+                           disabled style="border:none">
+                    {% endif %}
+                    {%endfor%}
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+{% if status %}
+<script>
+    alert('{{status}}');
+
+
+
+</script>
+{% endif %}
+{% endblock %}

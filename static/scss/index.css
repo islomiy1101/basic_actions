@@ -1,0 +1,157 @@
+
+
+.container{
+	width: 1200px;
+	height: 500px;
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.jumbotron {
+	position: absolute;
+	width: 180px;
+	height: 25px;
+	background: #002347;
+	top: -45px;
+	padding: 12px;
+	border-radius: 6px;
+	
+}
+
+.jumbotron span{
+	color: #fdc632;
+	font-weight: bold;
+	font-size: 19px;
+	
+
+}
+
+
+
+.card{
+	width:380px;
+	height: 490px;
+position: relative;
+	transition: .5s;
+	box-shadow:  0 0 4px #fdc632,
+	             0 0 4px #fdc632,
+	             0 0 4px #fdc632;
+}
+
+.card>.cardTop{
+	width: 100%;
+	height: 180px;
+	
+}
+
+.container i{
+	display: inline-block;
+}
+
+.line{
+	padding-top: 6px;
+	width: 100%;
+	height: 35px;
+
+}
+
+
+.card .cardTop img{
+	width: 100%;
+	height: 100%;
+
+}
+
+.card .cardTop::before{
+	content: "";
+	width: 100%;
+	height: 180px;
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+
+}
+
+.card .cardTop h3{
+	color: white;
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 37px;
+	
+	padding: 5px;
+}
+
+.card .cardTop p{
+	position: relative;
+	bottom: -20px;
+	left: 0;
+	color: #fdc632;
+	font-size: 20px;
+	font-weight: lighter;
+
+}
+
+.container .line i{
+	margin-left: 20px;
+	color: #fdc632;
+	padding-top: 10px;
+	padding-right: 20px;
+	font-family: sans-serif;
+
+}
+
+.container .line span{
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-family: sans-serif;
+
+}
+
+.container a{
+	
+	width: 80%;
+	height: 30px;
+	padding: 10px 10px;
+	background: #fdc632;
+	text-align: center;
+	text-decoration: none;
+	color: #002347;
+	font-weight: bold;
+	margin:20px auto;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+a:hover {
+
+	background: rgb(240, 219, 180);
+
+}
+
+.card:nth-child(2){
+	box-shadow:  0 0 4px #C66579FF, 
+	             0 0 4px #C66579FF,
+	             0 0 4px #C66579FF;
+}
+
+.card:hover{
+	-o-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+
+    box-shadow:  0 0 10px orange,
+                 0 0 20px #C66579FF,
+                 0 0 10px #C66579FF;
+}

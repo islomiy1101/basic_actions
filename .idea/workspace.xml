@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b20a56c-1dfe-4656-9543-7999d2b51a4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/actions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profiles/2020/10/15/adminjpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/1-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/1-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/1-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/1-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/2-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/2-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/2-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/2-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/3-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/3-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/3-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/3-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/09/topic2/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/07/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/18/audio-30.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/18/audio-30_59PixKQ.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/18/audio-english.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/18/mix_23m11s-audio-joinercom.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/uploads/2020/10/18/mix_29m29s-audio-joinercom.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/actions-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/categories/20200820/mph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/categories/20200820/nature.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/TV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/electronic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/keyboard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/lap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/mobile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/speaker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media/20200820/wifi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/22/mph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/1_W1fxQqc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/1_cxikBfn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/1_lQMZ9th.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/1_wyRKhep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/bg-edit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/electronic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/23/lap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/24/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/24/1_r8Njow1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/29/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/29/person_pic.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profiles/2020/08/29/person_pic_wm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2020/09/20/electronic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2020/09/20/wifi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/uploads/2020/09/20/wifi_YCc7CuQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondapp/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0002_partquestion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0003_question_partquestion_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0004_remove_question_qtitle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0005_auto_20200916_2038.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0006_partquestion_digital.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0007_auto_20200920_1217.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0008_auto_20200920_1218.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0009_auto_20200920_1220.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0010_question_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0011_auto_20200920_1709.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/migrations/0012_auto_20200922_1355.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/templates/secondapp/savollar.html" beforeDir="false" afterPath="$PROJECT_DIR$/secondapp/templates/secondapp/savollar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondproject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/secondproject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/TV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bg-cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bg-edit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/electronic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/keyboard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lap2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/mph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/nature.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/person pic wm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/speaker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/user.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/wifi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/change_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/dashboard_base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/edit_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/exam.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/record.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/student_dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/teacher_dashboard.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1nUwG3elCgfscs6o12PE1k5cqmv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\actions\templates" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b20a56c-1dfe-4656-9543-7999d2b51a4b" name="Default Changelist" comment="" />
+      <created>1611457879797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611457879797</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

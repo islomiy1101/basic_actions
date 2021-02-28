@@ -1,0 +1,38 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Biz haqimizda</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'about'%}">Biz haqimizda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ Start About Area =================-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Junior Education</h1>
+            <p>Location</p>
+            <p>Phone Number</p>
+            <p>Courses</p>
+            <p>Payments</p>
+        </div>
+    </div>
+</div>
+<!--================ End About Area =================-->
+{% endblock %}

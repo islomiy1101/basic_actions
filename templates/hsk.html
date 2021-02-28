@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/hsk1.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                HSK - Hanyu Shuiping Kaoshi ( 漢語水平考試,  汉语水平考试, Hànyǔ Shuǐpíng Kǎoshì ) - 
+                Xitoy tili ona tilisi bo’lmaganlar uchun standartlashtirilgan malaka imtihoni Putonghua . 
+                HSK malaka imtihoni xalqaro talabalar uchun attestatsiyaning yagona shakli hisoblanadi. 
+                HSK imtihonlari natijalari butun dunyoda tan olingan.
+
+                HSK imtihoni XXRda birinchi marta 1990 yilda o'tkazilgan. 
+                Bir yil o'tgach, u bir nechta xorijiy mamlakatlarda bo'lib o'tdi. 
+                Xitoy teng, bu imtihon nufuzi, TOEFL, dunyo barqaror o'sib bormoqda. 
+                2005 yilda Xalqaro Xitoy Tilini O'rganish Jamiyatining Yettinchi Kongressining 
+                Ikkinchi Yig'ilishida Xitoy tilini chet ellarda targ'ib qilish bo'yicha davlat 
+                departamenti (Xanban) bosh kotibi Syu Ling HSKni isloh qilishga kirishdi. imtihonni 
+                soddalashtirish va ommalashtirish. 2009 yilda yangi imtihonni ishlab chiqish tugallandi 
+                va 2009 yil oxirida dunyoning 41 mamlakatida HSK malakaviy imtihonini o'tkazish uchun 
+                106 ta imtihon markazi faoliyat ko'rsatgan. 2010 yil martidan yangi HSK imtihoni butun 
+                dunyoda o'tkazila boshlandi. 2010 yil boshiga kelib, undan o'tgan chet elliklarning 
+                umumiy soni 1 milliondan oshdi. 2010 yildan beri Konfutsiy institutlarining dunyo 
+                miqyosidagi tizimiga HSK imtihonini o'tkazish huquqi berildi .
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

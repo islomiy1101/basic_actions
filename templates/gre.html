@@ -1,0 +1,77 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/gre1.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                GRE ( ing.  The Graduate Record Examinations ) - aspiranturaga, magistraturaga 
+                yoki universitetda aspiranturaga kirish uchun AQSh va boshqa ba'zi mamlakatlarda 
+                (shu jumladan, Kanada , Shveytsariya va Avstraliya ) kirish uchun zarur bo'lgan test . 
+                Ko'pgina hollarda, ushbu test natijalari taqdim etilgunga qadar kirish uchun arizalar 
+                ko'rib chiqilmaydi.
+                GRE testi 1949 yilda ETS tomonidan uzoq vaqt davomida olingan va bitta tor mutaxassislik 
+                bilan cheklanmagan lingvistik, matematik, analitik va tanqidiy fikrlash qobiliyatlarini 
+                baholash uchun yaratilgan. GRE kompyuter testi Prometric test markazlarida mavjud.
+                GRE ballarining ahamiyati turli xil biznes maktablarining qabul komissiyalari o'rtasida 
+                farq qiladi - oddiy rasmiylikdan tortib, abituriyentlarni o'qishga qabul qilishdagi eng 
+                muhim omilgacha.
+                2011 yil avgust oyida GRE testi jiddiy o'zgarishlarga duch keldi. Natijada, u moslashuvchanlikni 
+                saqlab qoldi, lekin savoldan savolga emas, aksincha bo'limdan bo'limga. Shunday qilib, dastlabki 
+                ikkita bo'limning natijalari - lingvistik va matematik - keyingi ikki qismning murakkabligini 
+                aniqlaydi. GRE testining yangi versiyasida ikkala bo'lim turlari va savol turlari saqlanib 
+                qolgan, ammo baholash shkalasi o'zgargan - 200-800 dan 130-170 gacha.
+                Sinovni topshirish narxi 195 dollar. Ushbu narx maxsus sharoitlarda kamaytirilishi mumkin. 
+                ETS moliyaviy muammolarni boshdan kechirayotgan test topshiruvchilarga moliyaviy yordam 
+                ko'rsatishga tayyor. 5 yildan ko'proq vaqt oldin GRE test natijalari universitetlarga 
+                yuborilmaydi, garchi ba'zi biznes maktablari eski natijalarni qabul qilsa ham.
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

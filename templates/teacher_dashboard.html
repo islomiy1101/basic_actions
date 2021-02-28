@@ -1,0 +1,59 @@
+{% extends 'dashboard_base.html'%}
+{% block head%}
+
+<title>Shaxsiy kabinetga Xush kelibsz !!!</title>
+{% endblock%}
+{% block dashboard %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 mx-auto py-4">
+            <div class="card-header">
+                <h1>O'quv Markazi Haqida</h1>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Foydalanuvchi ID raqami</th>
+                            <td>{{user.id}}</td>
+                        </tr>
+                        <tr>
+                            <th>Foydalanuvchi nomi</th>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <th>E-Pochta</th>
+                            <td>{{user.email}}</td>
+                        </tr>
+                        <tr>
+                            <th>O'quv Markazi</th>
+                            <td>{{data.school_name}}</td>
+                        </tr>
+                        <tr>
+                            <th>Fanlar</th>
+                            <td>{{data.science}}</td>
+                        </tr>
+                        <tr>
+                            <th>Tillar</th>
+                            <td>{{data.lang}}</td>
+                        </tr>
+                        <tr>
+                            <th>Manzil</th>
+                            <td>{{data.provin}} viloyati,{{data.address}}</td>
+                        </tr>
+                        <tr>
+                            <th>Oxirgi marta kirilgan sana</th>
+                            <td>{{user.last_login}}</td>
+                        </tr>
+                        <tr>
+                            <th>A`zo bo`lingan sana</th>
+                            <td>{{user.date_joined}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

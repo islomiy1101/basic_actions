@@ -1,0 +1,1108 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Action.uz Bilimingizni sinash uchun ajoyib tanlov</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="static/scss/index.css"> -->
+	
+<style>
+    #submitbtn:hover.message{
+        display: block;
+    }
+    
+    
+
+
+
+</style>
+{% endblock %}
+{% block content %}
+<!--================ Start Home Banner Area =================-->
+<section class="home_banner_area">
+    <div class="banner_inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner_content text-center">
+                        <!--<p class="text-uppercase">
+                            Ishtiyoq haroratdan dalolat
+                        </p>-->
+                        <h2 class="text-uppercase mt-4 mb-5 h2-hover" >
+                            Hayot doirasida munosib o'rningni top
+                        </h2>
+                        <div>
+                            <a href="{% url 'register'%}" class="primary-btn2 mb-3 mb-sm-0">Ro'yhatdan o'tish</a>
+                            <a href="{% url 'languages'%}" class="primary-btn ml-sm-3 ml-0">Tillar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--================ End Home Banner Area =================-->
+
+
+<section class="feature_area section_gap_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">Imtihon turlari</h2>
+                    <p>
+                        Bilmingizga mos tilni tanlang
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span><img src="{% static 'images/ingliz.jpg'%}" width="320"> </span></div>
+                    <!--<div class="icon"><span><img src="{% static 'images/1.jpg'%}" width="250"> </span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Ingliz tili</h4>
+                        <p>
+                            Ro'yhatdan o'tganingizdan keyin Belgilangan vaqtda imtihonda qatnashishingiz mumkin. 
+                        </p>
+                        <br>
+                       
+                    </div> --> 
+                    <h4 class="mb-3">
+                            <a href="{% url 'register'%}">Qatnashish</a>
+                        </h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span><img src="{% static 'images/koreys.jpg'%}" width="320"> </span></div>
+                    <!--<div class="icon"><span class="flaticon-book"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Koreys tili</h4>
+                        <p>
+                            Ro'yhatdan o'tganingizdan keyin Belgilangan vaqtda imtihonda qatnashishingiz mumkin.
+                        </p>
+                        <br></div> --> 
+                        <h4 class="mb-3">
+                            <a href="{% url 'register'%}">Qatnashish</a>
+                        </h4>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span><img src="{% static 'images/yapon.jpg'%}" width="320"> </span></div>
+                    <!--<div class="icon"><span class="flaticon-earth"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Yapon tili</h4>
+                        <p>
+                            Ro'yhatdan o'tganingizdan keyin Belgilangan vaqtda imtihonda qatnashishingiz mumkin.
+                        </p>
+                        <br></div>--> 
+                        <h4 class="mb-3">
+                            <a href="{% url 'register'%}">Qatnashish</a>
+                        </h4>
+                    
+                </div>
+            </div>
+
+            <!--<div class="col-lg-3 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-earth"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Yapon tili</h4>
+                        <p>
+                            Ro'yhatdan o'tganingizdan keyin Belgilangan vaqtda imtihonda qatnashishingiz mumkin.
+                        </p>
+                        <br>
+                        <h4 class="mb-3">
+                            <a href="{% url 'register'%}">Batafsil</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>--> 
+        </div>
+    </div>
+</section>
+
+
+<!--================ Start Feature Area =================-->
+<section class="feature_area section_gap_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">Nima uchun actions?</h2>
+                    <p>
+                        Saytdan foydalanishning afzalliklari
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-student"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">O'quv markazlari</h4>
+                        <p>
+                            O'zingizga yaqin qulay ishonchli o'quv markazni tanlang
+                        </p>
+                        <br>
+                        <h4 class="mb-3">
+                            <a href="course-details.html">Batafsil</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-book"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Online bellashuv</h4>
+                        <p>
+                            Chet tillari va aniq fanlar
+                        </p>
+                        <br> <br>
+                        <h4 class="mb-3">
+                            <a href="course-details.html">Batafsil</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-earth"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">actions Sertifikati</h4>
+                        <p>
+                            O'zbekiston bo'yicha va viloyat bo'yicha bilim darajangiz
+                        </p>
+                        <br>
+                        <h4 class="mb-3">
+                            <a href="course-details.html">Batafsil</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Feature Area =================-->
+
+<div class="section_gap registration_area">
+    
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="row clock_sec clockdiv" id="clockdiv">
+                    <div class="col-lg-12">
+                        <h1 class="mb-3">Imtihon sanasi</h1>
+                        <p>
+                            Belgilangan muddat ichida imtihonga ro'yxatdan o'tishingiz mumkin. 
+                            Ro'yxatdan o'tmagan holatda imtihonda qatnasha olmaysiz!
+                        </p>
+                    </div>
+                    <div class="col clockinner1 clockinner">
+                        <h1 class="days">{{day}}</h1>
+                        <span class="smalltext">Kun</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="hours">{{hour}}</h1>
+                        <span class="smalltext">Soat</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="minutes">{{minute}}</h1>
+                        <span class="smalltext">Minut</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="seconds">{{secund}}</h1>
+                        <span class="smalltext">Soniya</span>
+                    </div>
+                </div>
+            </div>
+            <!--mesenjer fikr mulohazalar uhcun ajratilgan joy -->
+            
+        </div>
+    </div>
+</div>
+
+<!--Xalqaro imtihonlar boshlanishi-->
+
+
+
+<div class="popular_courses">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <br><br>
+                    <h2 class="mb-3">Xalqaro imtihon turlari</h2>
+                    <p>
+                        Dunyodagi eng taniqli standart testlar 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- single course -->
+            <div class="col-lg-12">
+                <div class="owl-carousel active_course">
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/ielts1.jpg'%}" alt=""width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$7</span>-->
+                            
+                            <!--span-->
+                            
+                            <p>
+                                IELTS - bu Buyuk Britaniya, Kanada, Avstraliya va Yangi Zelandiyaga o'qish va immigratsiya uchun eng ko'p so'ralgan ingliz tili testi...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'ielts'%}">Batafsil</a>
+                            </h4>
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+                            <!--<div class="authr_meta">
+                                    <img src="{% static 'img/courses/author1.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                            
+                               
+                            </div>
+                        </div>
+                    </div>
+       
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/topik1.jpg'%}" alt="" width="200" height="200"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            
+                            <p>
+                               Test of Proficiency in Korean (Topik)- Koreys va koreys bo'lmaganlar  uchun Koreys tili test. 
+                               Sinov Koreyada 
+                               har yili olti marta (yanvar, aprel, may, iyul...   
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'topic'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/hsk1.jpg'%}" alt=""width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$10</span>-->
+                            
+                            
+                            <!--span-->
+                            <p>
+                               HSK - Hanyu Shuiping Kaoshi ( 漢語水平考試,  汉语水平考试, Hànyǔ Shuǐpíng Kǎoshì )- 
+                               Xitoy tili ona tilisi bo’lmaganlar uchun...  
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'hsk'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+
+                            <!-- <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author3.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                            
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/act1.jpg'%}" alt=""width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$10</span>-->
+                            
+                            
+                            <!--span-->
+                            <p>
+                                ACT (American College Testing) - bu Qo'shma Shtatlardagi kollej va 
+                                universitetlarga kirish uchun, shuningdek biridan ikkinchisiga o'tish...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'act'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+
+                            <!-- <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author3.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                            
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/ap1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Advanced Placement examinations (AP exams) AQShda kollej kengashi 
+                                tomonidan taqdim etiladigan imtihonlar bo'lib, har may oyida...  
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'ap'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/ept1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                English Proficiency Test (EPT)
+                                EPT - bu ingliz tili o'qitish vositasi sifatida foydalaniladigan 
+                                akademik yoki professional dasturga...  
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'ept'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/cae1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Canadian Academic English Language (CAEL) baholash uchun 
+                                mo'ljallangan standartlashtirilgan sinov bo'lib kollej va universitetga qabul qilish uchun...  
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'cae'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/CAEL1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Canadian Academic English Language (CAEL) baholash uchun mo'ljallangan standartlashtirilgan sinov bo'lib 
+                                kollej va universitetga qabul qilish uchun... 
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'caeli'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/duolingo1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Duolingo -  amerikalik til-o'rganish sayti va mobil ilovasi bo'lib, shuningdek, raqamli tilni bilish darajasini baholash imtihoni...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'duolingo'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/gmat1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                GMAT (Graduate Management Admission Test ) - bu biznes maktablarida muvaffaqiyatli 
+                                o'qish qobiliyatini aniqlash uchun...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'gmat'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/jlpt1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Nixongo noryoku siken (日本語 能力 試 験  yoki Japanese- Language Proficiency 
+                                Test (JLPT) – yapon tili ona tili boʻlmagan shaxslarning...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'jlpt'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/klat1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Korean Language Ability Test  ( Koreyschasi :  세계 한국말 인증 시험 ) yoki KLAT 
+                                (avval Korean Language Proficiency Test yoki KLPT)... 
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'klat'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/cefr1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                CEFR-(Common European Framework of Reference) imtihoni Yevropa Ittifoqida foydalaniladigan
+                                chet tilini egallaganlik daraja tizimi. Imtihon...  
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'cefr'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/sat1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                SAT – (Scholastic Aptitude Test va Scholastic Assessment Test ) Amerika 
+                                Qo'shma Shtatlari standartlashtirilgan sinov qabul qilish uchun...
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'sat'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/toefl1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                TOEFL (Test of English as a Foreign Language) bu ingliz tilini 
+                                bilishning standartlashtirilgan sinovi bo'lib , uning natijalari ingliz tilini... 
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'toefl'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+                                  
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/gre1.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                GRE ( ing.  The Graduate Record Examinations ) - aspiranturaga, magistraturaga 
+                                yoki universitetda aspiranturaga kirish uchun... 
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'gre'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/psat2.jpg'%}" alt="" width="450" height="450"/>
+                        </div>
+                        <div class="course_content">
+                            <!--<span class="price">$25</span>-->
+                            <!--span yoqdi code--> 
+                            <p>
+                                Preliminary SAT/National Merit Scholarship Qualifying est (PSAT/NMSQT)  
+                                standartlashtirilgan test tomonidan boshqariladi... 
+                            </p>
+                            <br>
+                            <h4 class="mb-3">
+                                <a href="{% url 'psat'%}">Batafsil</a>
+                            </h4>
+                            
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center 
+                                    flex-lg-row flex-column mt-4"
+                            >
+                            <!--
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>-->
+                        
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--================ Start Popular Courses Area =================-->
+
+<div class="events_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3 text-white">Tanlang</h2>
+                    <p>
+                        actions tavsiya qiladi
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="single_event position-relative">
+                    <div class="event_thumb">
+                        <img src="{% static 'img/event/cc1.jpg'%}" alt=""/ height="500px">
+                    </div>
+                    <div class="event_details">
+                        <div class="d-flex mb-4">
+                            <div class="date"><span>69.000</span> so'm</div>
+ 
+                            <div class="time-location">
+                                <p>
+                                   <!--<span class="ti-time mr-2"></span>-->  Yetkazib berish 2 kun 
+                                </p>
+                                <p>
+                                   <!--<span class="ti-location-pin mr-2"></span>--> O'zbek tilida Gramatik lug'at
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Siz uchun - ajoyib qo'llanmalar va audio videolardan 
+                            qulay va oson foydalaning
+                        </p>
+                        <a href="#" class="primary-btn rounded-0 mt-3">Sotib olish</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_event position-relative">
+                    <div class="event_thumb">
+                        <img src="{% static 'img/event/ee1.jpg'%}" alt="" height="500"/>
+                    </div>
+                    <div class="event_details">
+                        <div class="d-flex mb-4">
+                            <div class="date"><span>49.000</span> so'm</div>
+
+                            <div class="time-location">
+                                <p>
+                                   <!--<span class="ti-time mr-2"></span>-->  Yetkazib berish 2 kun
+                                </p>
+                                <p>
+                                    <!--<span class="ti-location-pin mr-2"></span>-->Koreys tilida ertaklar to'plami 
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Siz uchun - ajoyib qo'llanmalar va audio videolardan 
+                            qulay va oson foydalaning
+                        </p>
+                        <a href="#" class="primary-btn rounded-0 mt-3">Sotib olish</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="text-center pt-lg-5 pt-3">
+                    <a href="#" class="event-link">
+                        Keyingisi <img src="{% static 'img/next.png'%}" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================ End Popular Courses Area =================-->
+
+
+<!--================ Start Registration Area =================-->
+
+<!--================ End Registration Area =================-->
+
+
+<!--================ Start Trainers Area =================-->
+<section class="trainer_area section_gap_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">actions asoschilari</h2>
+                    <p>
+                        Bir maqsad yo'lida birlashgan insonlar
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="img-fluid" src="{% static 'img/trainer/ali.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Alijonov Muhammadali</h4>
+                    <p class="designation">G'oya muallifi</p>
+                    <div class="mb-4">
+                        <p>
+                            CEO  
+                        </p>
+                    </div>
+                    <!--ijtimoiy tarmoqlar-->
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="img-fluid" src="{% static 'img/trainer/islom.jpg'%}"  alt="" width="150px" height="120px" />
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Makhamadjanov Islomjon</h4>
+                    <p class="designation">Senior developer</p>
+                    <div class="mb-4">
+                        <p>
+                           CEO
+                        </p>
+                    </div>
+                    <!--ijtimoiy tarmoqlar-->
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="img-fluid" src="{% static 'img/trainer/Iroda.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Nematova Irodaxon</h4>
+                    <p class="designation">Beginner developer</p>
+                    <div class="mb-4">
+                        <p>
+                            Manager
+                        </p>
+                    </div>
+                   <!--ijtimoiy tarmoqlar-->
+                </div>
+            </div>
+
+            <!--<div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="img-fluid" src="{% static 'img/trainer/t4.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Nathan Macken</h4>
+                    <p class="designation">Sr. web designer</p>
+                    <div class="mb-4">
+                        <p>
+                            If you are looking at blank cassettes on the web, you may be
+                            very confused at the.
+                        </p>
+                    </div>--> 
+                    <!--ijtimoiy tarmoqlar-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Trainers Area =================-->
+
+
+<!--================ Start Events Area =================-->
+
+
+
+<!--================ End Events Area =================-->
+
+
+<!--================ Start Testimonial Area =================-->
+
+<!--================ End Testimonial Area =================-->
+</section>
+{% if status %}
+<script>
+    alert('{{status}}');
+    window.location = '/'
+</script>
+{% endif %}
+{% endblock %}

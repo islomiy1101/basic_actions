@@ -1,0 +1,250 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Ro`yhatdan o`tish sahifasi</title>
+
+{% endblock %}
+{% block content %}
+
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Ro'yxatdan O'ting</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'register_corporate'%}">Ro'yxatdan O'ting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
+    <h2 style="text-align: center;">Ro'yxatdan O'ting</h2>
+    <hr>
+    <div class="row ">
+        <div class="col-md-9 mx-auto">
+            <form action="" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">O'quv markazi Nomi</label>
+                            <input type="text" name="schoolname" class="form-control"
+                                   placeholder="O'quv markazi nomini kiriting"
+                                   required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Logo</label>
+                            <input type="file" name="image" class="form-control" placeholder="Markaz Logosi ni yuklang"
+                                   required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-asterisk">Tillarni tanlang</span> <span
+                                    class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                {% for data in lang %}
+                                <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input
+                                        type="checkbox" value="{{data.name}}" name="science"/>&nbsp;&nbsp;{{data.name}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-asterisk">Fanlarni tanlang</span> <span
+                                    class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                {% for science in data %}
+                                <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input
+                                        type="checkbox" value="{{science.name}}" name="slang" />&nbsp;&nbsp;{{science.name}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p id="result"></p>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Foydalanuvchi nomi</label>
+                            <input type="text" name="uname" class="form-control"
+                                   placeholder="Foydalanuvchi nomini kiriting" id="username" onkeyup="checkuser()"
+                                   required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">E-pochta</label>
+                            <input type="email" name="email" class="form-control" placeholder="E-pochtangizni kiriting"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p id="resultpwd"></p>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Parol</label>
+                            <input type="password" name="password1" class="form-control" placeholder="Parolni kiriting"
+                                   id="password1" onkeyup="checkuser()" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Tasdiqlovchi Parol</label>
+                            <input type="password" name="password2" class="form-control"
+                                   placeholder="Tasdiqlovchi parolni kiriting" id='password2' onkeyup="checkuser()"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Telefon raqamingizni kiriting</label>
+                            <input type="tel" name="pnumber" class="form-control" placeholder="Namuna:99 3568578"
+                                   pattern="[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Davlat</label>
+                            <input type="text" name="state" class="form-control" placeholder="Davlatingizni kiriting"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Viloyat</label>
+                            <select name="province" id="" class="form-control">
+                                <option value="Andijon">Andijon</option>
+                                <option value="Buxoro">Buxoro</option>
+                                <option value="Fargʻona">Fargʻona</option>
+                                <option value="Jizzax">Jizzax</option>
+                                <option value="Xorazm">Xorazm</option>
+                                <option value="Namangan">Namangan</option>
+                                <option value="Navoiy">Navoiy</option>
+                                <option value="Qashqadaryo">Qashqadaryo</option>
+                                <option value="Qoraqalpogʻiston">Qoraqalpogʻiston</option>
+                                <option value="Samarqand">Samarqand</option>
+                                <option value="Sirdaryo">Sirdaryo</option>
+                                <option value="Surxondaryo">Surxondaryo</option>
+                                <option value="Qashqadaryo">Qashqadaryo</option>
+                                <option value="Toshkent">Toshkent</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Manzil</label>
+                            <input type="text" name="address" class="form-control"
+                                   placeholder="Manzilingizni kiriting" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="">Website</label>
+                            <input type="text" name="website" class="form-control" placeholder="Website manzilingizni kiriting"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="btn" class="btn btn-success" value="Ro`yxatdan o`tish" id="submitbtn">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    var options = [];
+
+$( '.dropdown-menu a' ).on( 'click', function( event ) {
+
+   var $target = $( event.currentTarget ),
+       val = $target.attr( 'data-value' ),
+       $inp = $target.find( 'input' ),
+       idx;
+
+   if ( ( idx = options.indexOf( val ) ) > -1 ) {
+      options.splice( idx, 1 );
+      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+   } else {
+      options.push( val );
+      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+   }
+
+   $( event.target ).blur();
+
+   console.log( options );
+   return false;
+});
+
+
+</script>
+<script>
+    function checkuser() {
+        let un = document.getElementById('username').value;
+        let pwd1 = document.getElementById('password1').value;
+        let pwd2 = document.getElementById('password2').value;
+        $.ajax({
+            url: "{% url 'check_user' %}",
+            type: 'get',
+            data: { usern: un },
+            success: function (data) {
+
+                if (data == 'Exists') {
+                    $('#result').html('Bu foydalanuchi avval ro`yxatdan o`tgan').addClass('text-danger');
+                    $('#username').addClass('alert alert-danger');
+                    $('#submitbtn').attr('disabled', 'disabled');
+                } else if (pwd1 !== pwd2) {
+                    $('#resultpwd').html('Kiritilgan parol va tasdiqlochi parol bir xil emas').addClass('text-danger');
+                    $('#password1').addClass('alert alert-danger');
+                    $('#password2').addClass('alert alert-danger');
+                    $('#submitbtn').attr('disabled', 'disabled');
+                } else {
+                    $('#result').html('');
+                    $('#resultpwd').html('');
+                    $('#username').removeClass('alert alert-danger')
+                    $('#password1').removeClass('alert alert-danger');
+                    $('#password2').removeClass('alert alert-danger');
+                    $('#submitbtn').removeAttr('disabled')
+                }
+
+            }
+        })
+    }
+
+
+
+
+
+
+</script>
+{% if status %}
+<script>
+    alert('{{status}}');
+    window.location = '/'
+
+
+
+
+
+</script>
+{% endif %}
+{%endblock%}

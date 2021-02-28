@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/jlpt1.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                Nixongo noryoku siken (日本語 能力 試 験  yoki Japanese- Language Proficiency 
+                Test (JLPT) – yapon tili ona tili boʻlmagan shaxslarning yapon tilini 
+                egallaganlik darajasini aniqlash maqsadida o'tkaziladigan imtihon. Ta'lim 
+                yapon tilida olib boriladigan oʻquv yurtlarga hujjat topshirish yoki Yaponiyada 
+                ishlash yoki malaka oshirish istagidagi talabgorlar uchun. Ilk bor 1984 yilda 15 
+                davlatda taxminan 7000 nafar talabgor ishtirokida oʻtkazilgan. 2017 yilda bu imtihonni 
+                81 davlatda 1 milliondan ortiq ishtirokchilar topshirgan.
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

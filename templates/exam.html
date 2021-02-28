@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load question_tags %}
+{% block head%}
+<title>Testda Omad yor bo`lsin</title>
+<script>
+    function timeout() {
+        let minute = Math.floor(timeLeft / 60);
+        let second = timeLeft % 60;
+        if (timeLeft === 0) {
+            return $('#form1').submit();
+        }
+        else {
+            document.getElementById('time').innerHTML = minute + ':' + second;
+        }
+        timeLeft--;
+        console.log(timeLeft);
+        setTimeout(() => {
+            timeout()
+        }, 1000);
+    }
+</script>
+{% endblock%}
+{% block content %}
+
+<body onload="timeout()">
+    <br><br><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-13 mx-auto" style="padding: 0 100px 0 100px;">
+                <div class="row">
+                    <div class="col-md-11" style="text-align:center;">
+                        <h2>{{name_lang}} TEST</h2>
+                    </div>
+                    <script> let timeLeft = {{ dif_time }} </script>
+                    <div class="col-md-1 " style="text-align:right;">
+                        <h3 id="time" class="fixed-top" style="padding:6.5% 8% 0 0">timeout</h3>
+                    </div>
+                </div>
+                <form action="" id="form1" method="post" name="form_submit">
+                    {% csrf_token %}
+                    <audio autoplay controls>
+                        <source src="{{audio}}" type="audio/mpeg">
+                    </audio>
+                    {% for j in datapart%}
+                    <h4 id='parttitle'>{{j.parttitle | safe}}</h4><br>
+                    {% if j.partdesc %}
+                    <div style="border: 0px solid red;">
+                        <h5 id="partdesc">{{j.partdesc | safe}}</h5>
+                    </div><br>
+                    {% else %}
+                    <div></div>
+                    {% endif %}
+                    {%  savollar id=j.id %}
+                    {% endfor %}
+                    <input type="submit" name="btn" class="btn btn-success" value="Jo'natish" id="submitbtn">
+                </form>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

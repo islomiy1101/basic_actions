@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/ielts.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                IELTS (inglizcha: International English Language Testing System) — inglizzabon 
+                mamlakatda taʼlim olmoqchi, immigratsiya qilmoqchi yoki amaliyot oʻtamoqchi boʻlgan 
+                kishilar uchun test sinovidir. Test ona tili ingliz tili boʻlmagan insonlarning bu 
+                tilni qanchalik chuqur bilishlarini aniqlashga yordam beradi.
+                Avstraliya, Yangi Zelandiya davlatlariga immigratsiya maqsadida hujjat topshirganlar, 
+                Kanada, Avstraliya, Yangi Zelandiya, Amerika, Britaniya, Irlandiya universitetlarida 
+                oʻqishni xohlaganlar IELTS testini topshirishlari kerak. IELTS imtihonining yakuniy 
+                bahosini tan oladigan dunyo universitetlari muntazam ravishda oshib bormoqda.
+                Testning har bir boʻlimi uchun ballar 1 dan 9 gacha boʻlgan shkalada oʻlchanadi. 
+                Eng yuqori ball 9. 
+
+                Test 4 boʻlim boʻyicha oʻrta ball hisoblanadi.
+                •  Tinglash (tinglash qobiliyatlari);
+                •  O'qish (o'qish qobiliyatlari);
+                •  Yozish (ingliz tilida yozma ko'nikmalar);
+                •  Gapirish (ingliz tilida so'zlashuv qobiliyati)
+
+                9 — tajribali foydalanuvchi — ekspert
+                8 — juda yaxshi foydalanuvchi
+                7 — yaxshi foydalanuvchi
+                6 — kompetent foydalanuvchi
+                5 — oʻrtacha foydalanuvchi
+                4 — chegaralangan foydalanuvchi
+                3 — nihoyatda chegaralangan foydalanuvchi
+                2 — qisman foydalanuvchi
+                1 — foydalanuvchi emas
+                Universitetda oʻqish uchun IELTS boʻyicha oʻrtacha 6.0 balliga ega boʻlish zarur. 
+                Agar natija 5.0 yoki 5.5ni tashkil etsa, u holda siz 6.0 koʻrsatkichiga ega boʻlish 
+                uchun shu oʻquv yurti qoshidagi koʻpi bilan 30 hafta davom etadigan ingliz tili kurslariga 
+                qatnashishingiz kerak boʻladi (ayrim universitetlar oʻrtacha ballarini 6.5 deb eʼlon qilishadi). 
+                Shunday qilib, IELTS Academic module boʻyicha oʻtish balli 5.0.
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

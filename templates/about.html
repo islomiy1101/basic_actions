@@ -1,0 +1,72 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+</style>
+
+
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Biz haqimizda</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'about'%}">Biz haqimizda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ Start About Area =================-->
+<section class="about_area section_gap">
+    <div class="container">
+        <div class="row h_blog_item">
+            <div class="col-lg-6">
+                <div class="h_blog_img">
+                    <div class="santr">
+                        <img class="img-fluid" src="{% static 'img/actis.png'%}" alt=""/>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="h_blog_text">
+                    <div class="h_blog_text_inner left right">
+                        <h4>Salom actionsga hush kelibsiz</h4>
+                        <p>
+                           Avvalo har bir shaxs jamiyatda o’z o’rni va mavqei bo’lgani kabi  
+                           jamoaviy ishlash, bir birini qo’llab quvvatlash kabi tamoyillarga
+                            suyangan holda biz sizga sog’lom raqobatni rivojlantirish va ta’lim sohasida 
+                            tub burilish yasab yangi O’zbekistonni yaratmoqchimiz.
+                        </p>
+                        <p>
+                            Actionsloyihasiga2020 yil 14 iyulda asos solingan.Actions 
+                            loyihasidan ko’zlangan maqsad O’zbekistondagi sifatli va ishonchli
+                            ta’limni sizga yuqori natijalarni olgan o’quvchilarni ko’rsatish 
+                            orqali o’zingizga munosib ta’lim markazini tanlashingiz uchun yaratdik. 
+                            Natijalarni viloyatlar kesimida va O’zbekiston bo’yicha ko’rish imkonini beradi.
+                        </p>
+                        <a class="primary-btn" href="#">
+                            Ko'proq bilish <i class="ti-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End About Area =================-->
+{% endblock %}

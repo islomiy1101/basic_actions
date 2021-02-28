@@ -1,0 +1,130 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+{% block head%}
+<title>Profilni tahrirlash</title>
+<style>
+    .bg-img {
+        background: url('/static/images/bg-cover.jpg')
+    }
+    #header {
+        background-color: #36A5C3;
+    }
+</style>
+{% endblock %}
+{% block dashboard %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bg-img py-5 text-center text-light">
+            <h1>Boshqarish paneli &gt; Profilni tahrirlash</h1>
+        </div>
+        <div class="col-md-6 mx-auto py-3 bg-light my-2">
+            <div class="text-center">
+                {% if data.school_logo%}
+                <img src="/media/{{data.school_logo}}" style="height: 150px; width: 150px; border-radius: 50%;">
+                {% else %}
+                <img src="{% static 'img/user.png'%}" style="height: 150px; width: 150px; border-radius: 50%;">
+                {% endif%}
+            </div>
+            <form action="" method='post' enctype="multipart/form-data">
+                {%csrf_token%}
+                {% if status %}
+                <div class="alert alert-primary">
+                    {{status}}
+                </div>
+                {% endif %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>O`quv Markazi</label>
+                            <input type="text" class="form-control" name="sname" placeholder="O`quv Markazni kiriting"
+                                value="{{data.school_name}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>E-Pochta</label>
+                            <input type="email" class="form-control" name="email" placeholder="O`quv Markazni kiriting"
+                                value="{{user.email}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Viloyat</label>
+                            <input type="text" class="form-control" name="provin" placeholder="Viloyatingizni kiriting"
+                                value="{{data.provin}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Manzil</label>
+                            <input type="text" class="form-control" name="address" value="{{data.address}}"placeholder="Manzilingizni kiriting">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Fanlar</label>
+                            <input type="text" class="form-control" name="science" placeholder="Fanlarni kiriting"
+                                value="{{data.science}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Tillar</label>
+                            <input type="text" class="form-control" name="lang" value="{{data.lang}}"placeholder="Tillarni kiriting">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Telefon Nomer</label>
+                            <input type="text" value="{{data.contact_number}}" class="form-control" name="contact"
+                                placeholder=" Telefon nomeringizni kiriting" title="Number must contain 10 digits only!!">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Davlat</label>
+                            <input type="text" class="form-control" name="state" placeholder="Davlatingizni kiriting"
+                                value="{{data.state}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Website</label>
+                            <input type="text" value="{{data.website}}" class="form-control" name="website"
+                                placeholder=" Website ingizni  kiriting">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Telegram</label>
+                            <input type="text" class="form-control" name="telegram" placeholder="telegram..."
+                                value="{{data.telegram}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Youtube</label>
+                            <input type="text" value="{{data.youtube}}" class="form-control" name="youtube"
+                                placeholder="Youtube ...">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Facebook</label>
+                            <input type="text" class="form-control" name="facebook" placeholder="facebook..."
+                                value="{{data.facebook}}">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Instagram</label>
+                            <input type="text" class="form-control" name="instagram" placeholder="Instagram..."
+                                value="{{data.instagram}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="changeprofile" value="O`zgarishlarni saqlash" class="btn btn-primary"
+                        style="width:50%;border-radius:20px;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

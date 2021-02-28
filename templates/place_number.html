@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+{%for results in data %}
+{{ results }}
+<br>
+{% for result in results %}
+{{ result.user_id.first_name }}: {{ result.result }} -> {{ result.place_number }} <br>
+{%endfor%}
+<hr>
+{%endfor%}
+
+{% endblock%}

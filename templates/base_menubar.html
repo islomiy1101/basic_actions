@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="{% static 'images/favicon1.png'%}" type="image/png"/>
+    {% block title %}
+
+    {% endblock %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/my.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}"/>
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css%'}"/>
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    {% block head%}
+
+    {% endblock %}
+</head>
+
+<body>
+<!--================ Start Header Menu Area =================-->
+<header class="header_area white-header">
+    <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+            <div class="container">
+                <form class="d-flex justify-content-between" method="" action="">
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="search_input"
+                            placeholder="Search Here"
+                    />
+                    <button type="submit" class="btn"></button>
+                    <span
+                            class="ti-close"
+                            id="close_search"
+                            title="Close Search"
+                    ></span>
+                </form>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="{% url 'index'%}">
+                    <img src="{% static 'img/logo8oq23.jpg'%}" alt="" width="163"
+                         height="50" class="logobase"/></a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div
+                        class="collapse navbar-collapse offset"
+                        id="navbarSupportedContent"
+                >
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item submenu dropdown active ">
+                            <a href="{% url 'about'%}" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true" aria-expanded="false">Biz haqimizda</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about'%}">Maqsad va G'oyalar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item submenu dropdown  ">
+                            <a href="{% url 'index'%}" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true" aria-expanded="false">Natijalar</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'result_section'%}">Viloyat</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'result_section_country'%}">Respublika</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'education_center'%}">Markazlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news'%}">Yangiliklar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact'%}">Aloqa</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item" style="list-style:none;" id="search">
+                            <a href="#" class="nav-link search">
+                                <i class="ti-search"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item submenu dropdown  ">
+                            <a href="{% url 'index'%}" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                               role="button"
+                               aria-haspopup="true" aria-expanded="false">Salom {{user.username}}</a>
+                            <ul class="dropdown-menu">
+                                {% if user.is_staff %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'teacher_dash'%}">Shaxsiy kabinet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'user_logout'%}">Chiqish</a>
+                                </li>
+                                {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'student_dash'%}">Shaxsiy kabinet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'user_logout'%}">Chiqish</a>
+                                </li>
+                                {% endif %}
+                                {% else %}
+                                <li class="nav-item submenu dropdown  ">
+                                    <a href="{% url 'index'%}" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                       role="button"
+                                       aria-haspopup="true" aria-expanded="false">Ro'yxatdan O'tish</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'register'%}">Shaxsiy(Talaba)</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'register_corporate'%}">Shaxsiy(Hamkor)</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="" data-toggle="modal" data-target='#mymodal'>Kirish</a>
+                                </li>
+                                <li class="nav-item" style="list-style:none;">
+                                    <a href="#" class="nav-link search" id="search">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="col-md-12">
+        <div class="modal fade inspect" id="mymodal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" style="z-index: 10;">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss='modal'>&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{% url 'user_login' %}" method="post">
+                            {%csrf_token %}
+                            <div class="form-group">
+                                <label for="">Foydalanuvchi Nomi</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user-o"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" name="username" class="form-control"
+                                           placeholder='Foydalanuvchi nomini kiriting...'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Parol</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-key"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" name="password" class="form-control"
+                                           placeholder="Parolni kiriting">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="rememberme" id=""><label for="">&nbsp; Yodda saqla</label>
+                                &nbsp;<a href="{% url 'forgot_pass'%}">Parolni unutdingmi?</a>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Kirish" class="btn btn-success" style='width:100%;'>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--================ End Header Menu Area =================-->
+
+<!--================Home Banner Area =================-->
+<!--================End Home Banner Area =================-->
+{% block content %}
+{% endblock %}
+<!--================ Start Feature Area =================-->
+<section class="feature_area section_gap_top title-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3 text-white">Nima uchun actions?</h2>
+                    <p>
+                        Saytdan foydalanishning afzalliklari
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-student"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">O'quv markazlari</h4>
+                        <p>
+                            O'zingizga yaqin qulay ishonchli o'quv markazni tanlang
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-book"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Online bellashuv</h4>
+                        <p>
+                            Chet tillari va aniq fanlar
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-earth"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">actions Sertifikati</h4>
+                        <p>
+                            O'zbekiston bo'yicha va viloyat bo'yicha bilim darajangiz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Feature Area =================-->
+
+<!--================ Start Testimonial Area =================-->
+<!--Klent matni olingan-->
+<!--================ End Testimonial Area =================-->
+
+<!--================ Start footer Area  =================-->
+<footer class="footer-area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>actions</h4>
+                <ul>
+                    <li><a href="#">Biz haqimizda</a></li>
+                    <li><a href="#">Natijalar</a></li>
+                    <li><a href="#">Markazlar</a></li>
+                    <li><a href="#">Yangiliklar</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Tavsiyalar</h4>
+                <ul>
+                    <li><a href="#">Markazlar</a></li>
+                    <li><a href="#">O'quv qo'llanmalar</a></li>
+                    <li><a href="#">Ma'lumotlar</a></li>
+                    <li><a href="#">Maslahatlar</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Hamkorlar</h4>
+                <ul>
+                    <li><a href="#">Super Junior</a></li>
+                    <li><a href="#">Korea yangiliklari</a></li>
+                    <li><a href="#">Book one</a></li>
+                    <li><a href="#">Hojibobo</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Brend ta'lim</h4>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 single-footer-widget">
+                <div class="col-lg-4 col-md-12 footer-social"></i></div>
+                           
+                           <h4 >Bog'lanish</h3>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <p style="font-size: 17px; color:aliceblue; ">+(998) 93 483 - 50 - 52</p>
+
+                <!--<div class="col-lg-4 col-md-6 single-footer-widget">
+                <h4>Newsletter</h4>
+                
+                <div class="form-wrap" id="mc_embed_signup">
+                    <form
+                            target="_blank"
+                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                            method="get"
+                            class="form-inline"
+                    >
+                        <input
+                                class="form-control"
+                                name="EMAIL"
+                                placeholder="Email kiriting"
+                                onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Email kiriting'"
+                                required=""
+                                type="email"
+                        />
+                        <button class="click-btn btn btn-default">
+                            <span>subscribe</span>
+                        </button>
+                        <div style="position: absolute; left: -5000px;">
+                            <input
+                                    name="b_36c4fd991d266f23781ded980_aefe40901a"
+                                    tabindex="-1"
+                                    value=""
+                                    type="text"
+                            />
+                        </div>
+
+            
+
+                        <div class="info"></div>
+                    </form>-->
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="row footer-bottom d-flex justify-content-between">
+            <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Actions &copy;<script>write(new Date().getFullYear());</script>
+                2021 <i class="ti-heart" aria-hidden="true"></i>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            <div class="col-lg-4 col-md-12 footer-social">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://mobile.twitter.com/action_uz"><i class="fa fa-twitter" ></i></a>
+                <a href="https://t.me/actions_uz"><i class="fa fa-telegram"></i></a>
+                <a href="https://instagram.com/actions_uz?igshid=1ttcad61vztxz"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCurdwYew5UsaCLMhAbik6mA?view_as=subscriber"><i
+                        class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--================ End footer Area  =================-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'js/popper.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js'%}"></script>
+<script src="{% static 'vendors/owl-carousel/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/owl-carousel-thumb.min.js'%}"></script>
+<script src="{% static 'js/mail-script.js'%}"></script>
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+<script src="{% static 'js/gmaps.min.js'%}"></script>
+<script src="{% static 'js/theme.js'%}"></script>
+</body>
+</html>

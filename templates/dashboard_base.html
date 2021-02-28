@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head%}
+<style>
+    .header_area .navbar {
+    background: blue;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+}
+
+</style>
+{% endblock %}
+{% block content %}
+<br><br><br><br>
+<div class="container-fluid">
+    <div class="row">
+        <!-- left side menu -->
+        <div class="col-md-2 bg-dark">
+            <nav class="navbar navbar-dark py-5">
+                <a href="" class="navbar-brand">
+                    <div class="text-center">
+                        {% if data.profile_pic%}
+                        <img src="/media/{{data.profile_pic}}" style="height: 50px; width: 50px; border-radius: 50%;">
+                        {% elif data.school_logo%}
+                        <img src="/media/{{data.school_logo}}" style="height: 50px; width: 50px; border-radius: 50%;">
+                        {% else %}
+                        <img src="{% static 'img/user.png'%}" style="height: 50px; width: 50px; border-radius: 50%;">
+                        {% endif%}
+                    </div>
+                    <p>{{user.last_name}}</p>
+                </a>
+                <ul class="navbar-nav">
+                    {% if user.is_staff %}
+                    <li class="navbar-item">
+                        <a href="{% url 'teacher_dash'%}" class="nav-link">Profilni ko`rish</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{% url 'edit_profile_teacher'%}" class="nav-link">Profilni tahrirlash</a>
+                    </li>
+                    {% else %}
+                    <li class="navbar-item">
+                        <a href="{% url 'student_dash'%}" class="nav-link">Profilni ko`rish</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{% url 'edit_profile'%}" class="nav-link">Profilni tahrirlash</a>
+                    </li>
+                    {% endif %}
+
+                    <li class="navbar-item">
+                        <a href="{% url 'change_password'%}" class="nav-link">Parolni yangilash</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{% url 'user_logout'%}" class="nav-link">Profildan chiqish</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- right side menu -->
+        <div class="col-md-10">
+            {% block dashboard %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock%}

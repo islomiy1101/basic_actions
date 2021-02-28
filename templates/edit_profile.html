@@ -1,0 +1,120 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+{% block head%}
+<title>Profilni tahrirlash</title>
+<style>
+    .bg-img {
+        background: url('/static/images/bg-cover.jpg')
+    }
+    #header {
+        background-color: #36A5C3;
+    }
+</style>
+{% endblock %}
+{% block dashboard %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bg-img py-5 text-center text-light">
+            <h1>Boshqarish paneli &gt; Profilni tahrirlash</h1>
+        </div>
+        <div class="col-md-6 mx-auto py-3 bg-light my-2">
+            <div class="text-center">
+                {% if data.profile_pic%}
+                <img src="/media/{{data.profile_pic}}" style="height: 150px; width: 150px; border-radius: 50%;">
+                {% else %}
+                <img src="{% static 'img/user.png'%}" style="height: 150px; width: 150px; border-radius: 50%;">
+                {% endif%}
+            </div>
+            <form action="" method='post' enctype="multipart/form-data">
+                {%csrf_token%}
+                {% if status %}
+                <div class="alert alert-primary">
+                    {{status}}
+                </div>
+                {% endif %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <label>Ism</label>
+                            <input type="text" class="form-control" name="fname" placeholder="Ismingizni kiriting"
+                                value="{{user.first_name}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Familya</label>
+                            <input type="text" class="form-control" name="lname" placeholder="Familyangizni kiriting"
+                                value="{{user.last_name}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>E-pochta</label>
+                            <input type="email" class="form-control" name="email" placeholder="E-pochtangizni kiriting"
+                                value="{{user.email}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Profil uchun rasm</label>
+                            <input type="file" class="form-control" name="image" value="{{data.profile_pic}}">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Telefon Nomer</label>
+                            <input type="text" value="{{data.contact_number}}" class="form-control" name="contact"
+                                placeholder=" Telefon nomeringizni kiriting" title="Number must contain 10 digits only!!"
+                                value="{{data.contact_number}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Shahar / Tuman</label>
+                            <input type="text" class="form-control" name="city" placeholder="Shahriz yoki Tumaningizni kiriting"
+                                value="{{data.city}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Jins</label>
+
+                            <select name="gender" class="form-control">
+                                <option value="Male">Erkak</option>
+
+                                {% if data.gender == "Female" %}
+                                <option value="Female" selected>Ayol</option>
+                                {% else %}
+                                <option value="Female">Ayol</option>
+                                {% endif %}
+
+                                {% if data.gender == "Others" %}
+                                <option value="Others" selected>Boshqa</option>
+                                {% else %}
+                                <option value="Others">Boshqa</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Kasb</label>
+                            <input type="text" class="form-control" placeholder="Qanaqa faoilyat bn shug'ullanasiz" name="occ"
+                                value="{{data.occupation}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>O`zingiz haqingizda</label>
+                    <textarea name="about" placeholder="O`zingiz haqingizda xabar qoldiring"
+                        class="form-control">{{data.about}}</textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="changeprofile" value="O`zgarishlarni saqlash" class="btn btn-primary"
+                        style="width:50%;border-radius:20px;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

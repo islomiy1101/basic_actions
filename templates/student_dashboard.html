@@ -1,0 +1,47 @@
+{% extends 'dashboard_base.html'%}
+{% block head%}
+
+<title>Shaxsiy kabinetga Xush kelibsz !!!</title>
+{% endblock%}
+{% block dashboard %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 mx-auto py-4">
+            <div class="card-header">
+                <h1>Men haqimda</h1>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Foydalanuvchi ID raqami</th>
+                            <td>{{user.id}}</td>
+                        </tr>
+                        <tr>
+                            <th>Foydalanuvchi nomi</th>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <th>Familya & Ism</th>
+                            <td>{{user.first_name}} {{user.last_name}}</td>
+                        </tr>
+                        <tr>
+                            <th>Sertifikat Nomer</th>
+                            <td>{{data.sert_id}}</td>
+                        </tr>
+                        <tr>
+                            <th>Oxirgi marta kirilgan sana</th>
+                            <td>{{user.last_login}}</td>
+                        </tr>
+                        <tr>
+                            <th>A`zo bo`lingan sana</th>
+                            <td>{{user.date_joined}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

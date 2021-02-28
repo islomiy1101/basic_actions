@@ -1,0 +1,112 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Imtixonni Muvaffaqiyatli yakunladingiz</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style>
+    .primary-btn{
+        width:160px;
+    }
+</style>
+<script>
+    function goFurther() {
+        if (document.getElementById("chkAgree").checked == true)
+            document.getElementById("btnSubmit").disabled = false;
+        else
+            document.getElementById("btnSubmit").disabled = true;
+    }
+
+</script>
+
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Diningizni tanlang</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ml-50 mx-auto">
+            <hr>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                {{message|safe}}
+            </div>
+            {% endfor %}
+            {% else %}
+            <h5 class='text-center'style="font-size:20px;font-weight:bold; padding-bottom:15px;">Diningizni belgilang</h5>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend mb-3">
+                        <span class="input-group-text mt-1">
+                            <img src="{% static 'img/islam.png'%}" width="30" height="30"/>
+                        </span>
+                        </div>
+                        <input type="submit" class="primary-btn transparent mb-15 ml-2 wow fadeInDown"
+                               data-wow-duration="1s"
+                               data-wow-delay=".3s" name="din" value="Islom"
+                               style="font-weight:bold;font-size:16px;border-color:white;text-transform: capitalize;">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend mb-3 mt-0">
+                        <span class="input-group-text mt-1">
+                            <img src="{% static 'img/catholic.png'%}" width="30" height="30"/>
+                        </span>
+                        </div>
+                        <input type="submit" class="primary-btn transparent mr-2  mb-15 ml-2  wow fadeInDown"
+                               data-wow-duration="1s"
+                               data-wow-delay=".3s" name="din" value="Xristian"
+                               style="font-weight:bold;font-size:16px;border-color:white;text-transform: capitalize;">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend mb-3">
+                        <span class="input-group-text mt-1">
+                            <img src="{% static 'img/yahudiy.jpg'%}" width="30" height="30"/>
+                        </span>
+                        </div>
+                        <input type="submit" class="primary-btn transparent mr-2 mb-15 ml-2 wow fadeInDown"
+                               data-wow-duration="1s"
+                               data-wow-delay=".3s" name="din" value="Yahudiy"
+                               style="font-weight:bold;font-size:16px;border-color:white;text-transform: capitalize;">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend mb-3">
+                        <span class="input-group-text mt-1">
+                            <img src="{% static 'img/ateist.jpg'%}" width="30" height="30"/>
+                        </span>
+                        </div>
+                        <input type="submit" class="primary-btn transparent mr-2 mb-15 ml-2 wow fadeInDown"
+                               data-wow-duration="1s"
+                               data-wow-delay=".3s" name="din" value="Ateist"
+                               style="font-weight:bold;font-size:16px;border-color:white;text-transform: capitalize;">
+                    </div>
+                </div>
+
+            </form>
+            {% endif %}
+            <br>
+
+        </div>
+    </div>
+</div>
+<br><br>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Biz bilan Aloqa</title>
+
+{% endblock %}
+{% block content %}
+
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Biz bilan bog`laning</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'contact'%}">Biz bilan Aloqa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
+    <h2 style="text-align: center;">Biz bilan bog`laning</h2><hr>
+    <div class="row">
+        <div class="col-md-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.517174499083!2d71.64658751460726!3d40.992052228373474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4be6a88e139f%3A0xe9f0c86392865058!2zTWFrcm8g0YHRg9C_0LXRgNC80LDRgNC60LXRgiDQotCmINCo0L7QtNC70LjQug!5e0!3m2!1sru!2s!4v1597759693954!5m2!1sru!2s"
+                width="100%" height="555" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+        <div class="col-md-6 ">
+            <form action="" method="post">{%csrf_token%}
+                <div class="form-group">
+                    <label>Ism&Familya</label>
+                    <input type="text" name="name" class="form-control" placeholder="Ismi&Familyangizni kiriting..." required>
+                </div>
+                <div class="form-group">
+                    <label>Telefon nomer</label>
+                    <input type="tel" name="contact" class="form-control" placeholder="991234567..."
+                    pattern="[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}" required>
+                </div>
+                <div class="form-group">
+                    <label>E-pochta</label>
+                    <input type="email" name="email" class="form-control" placeholder="E-pochta manzilingizni kiriting..."
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Mavzu</label>
+                    <input type="text" name="subject" class="form-control" placeholder="Mavzu nomini kiriting..." required>
+                </div>
+                <div class="form-group">
+                    <label>Xabar</label>
+                    <textarea class='form-control' rows="5" name="message" required
+                        placeholder="Taklif yoki Tanqidingizni batafsil yozing !..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class='btn btn-success' value="Yuborish">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% if status %}
+<script>
+    alert('{{status}}');
+</script>
+{% endif %}
+{% endblock %}

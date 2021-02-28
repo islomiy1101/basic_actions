@@ -1,0 +1,64 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Respublika bo`yicha Natijalarni Tanlash Oynasi</title>
+<style>
+    #header {
+        background-color: #36A5C3;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Natijalar</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'result_section_country'%}">Respublika</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="col-md-13 mt-20 mx-auto">
+        <form action="" method="post">
+            {%csrf_token%}
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="">Test Tilini Tanlang</label>
+                        <select name="langs" id="" class="form-control">
+                            {% for lang in data %}
+                            <option value="{{lang.name_lang}}">{{lang.name_lang}}</option>
+                            {% endfor%}
+                        </select>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 32px;">
+                       <input type="submit" name="btn" class="btn btn-success" value="Natijalarni ko`rish" id="submitbtn">
+                    </div>
+                </div>
+            </div>
+           
+        </form>
+    </div>
+</div>
+    {% if messages%}
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert" style="text-align: center;">
+        {{message|safe}}
+    </div>
+
+
+<br><br><br>
+
+{% endfor %}
+{% endif %}
+{% endblock%}

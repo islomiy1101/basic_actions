@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+
+<style>
+    .santr {
+        margin-right: 100px;
+    }
+    
+    
+ 
+ 
+
+    p {
+        border: 2px solid #002347;
+        color: #002347;
+        padding: 30px;
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-top: 193px;
+    }
+    p:hover {
+        border: 5px solid #B0CBC4;
+        background-color: #F2EBD8;
+        border-top-left-radius: 100% 20px;
+        border-bottom-right-radius: 100% 20px;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            
+            <div class="imgtrik">
+                <img src="{% static 'images/ept.jpg'%}" width="300" style="margin-bottom: -150px; margin-top: 100px; margin-left: 70px;">
+            </div>
+        </div>
+            
+        <div class="col-md-6">
+            
+                <p>
+                English Proficiency Test (EPT)
+                EPT - bu ingliz tili o'qitish vositasi sifatida foydalaniladigan akademik yoki professional 
+                dasturga qo'shilishni istagan talabalarning ingliz tilini bilish darajasini aniqlashga 
+                qaratilgan test . Bu xalqaro miqyosda tan olingan amaliyot ko'ra ishlab chiqilgan.
+
+                EPT tillari uchun Evropa mushtarak Yo'naltiruvchi tuzilmasi asoslangan edi .
+
+                Sinov o'quvchilarning ingliz tilini bilish darajasini, ularning ko'p tanlovli 80 
+                savolga javoblari orqali quyidagicha bo'linadi:
+                •  Til tarkibi: 40 ta savol
+                •  O'qishni tushunish: 20 savol
+                •  Yozma tahlil: 20 ta savol
+
+                Shunday qilib, test tilning asosiy tarkibiy qismlarini, shu jumladan lug'at so'zlari 
+                va ularning ma'nolarini, shuningdek ingliz tilining tuzilishi, sintaksisini va yozish 
+                tizimini ob'ektiv va ishonchli natijalarga erishish uchun ushbu komponentlarni sinovdan 
+                o'tkazadigan savollar to'plami orqali qamrab oladi.
+                </p>
+        </div>
+
+        
+    </div>
+</div>
+
+<!--================ Start About Area =================-->
+
+<!--================ End About Area =================-->
+{% endblock %}

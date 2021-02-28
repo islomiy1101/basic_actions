@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>Imtixonni Muvaffaqiyatli yakunladingiz</title>
+<style>
+    #header {
+        background-color: #36A5C3;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<br><br><br><br>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto"><hr>
+                <h3 style="text-align: center;">Hurmatli, <b>{{user}}</b> siz Imtixonni 
+                    muvaffaqiyatli yakunlaganingiz bilan tabriklaymiz!!!</h3><hr>
+                <h3 style="text-align: center;">Test Natijalarini yaqin kunlarda e`lon qilamiz. 
+                    Iltimos,<b><a href="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">{{email}}</a></b> E-pochtangizni tekshirib turing
+                </h3>    
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock %}
